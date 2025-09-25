@@ -1,3 +1,15 @@
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://jen900704.github.io",           # GitHub Pages 網域
+        "https://jen900704.github.io/pants-search-ui",  #（可留可不留，網域就夠）
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
